@@ -23,7 +23,9 @@ class PageWrapper extends Component{
                     </ul>
                 </div>
             </div>
+           
         </nav>
+        {this.props.children}
         </div>
         )
        
