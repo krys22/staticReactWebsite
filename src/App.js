@@ -4,16 +4,17 @@ import Home from './components/Pages/home';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 function App() {
   return (
+    <Router>
     <PageWrapper>
-      <Router>
+     
         <Route 
-        path="/home"
+        path="/"
         component={Home}
         />
-      </Router>
+     
      
     </PageWrapper>
-    
+    </Router>
     
   );
 }
