@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Header from '../Common/header';
-import {image} from '../assets/img/header-bg.jpg';
+import image from '../assets/img/header-bg.jpg';
 
 class Home extends Component {
 
