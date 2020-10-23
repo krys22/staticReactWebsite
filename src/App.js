@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Home from './components/Pages/home';
 import About from './components/Pages/about';
 import Services from './components/Common/services';
+import Portfolio from './components/Common/portfolio';
 
 
 function App() {
@@ -24,6 +25,10 @@ function App() {
          <Route
         path="/services"
         component={Services}
+        />
+        <Route
+        path="/portfolio"
+        component={Portfolio}
         />
     </PageWrapper>
     </Router>
