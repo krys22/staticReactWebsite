@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import Header from '../Common/header';
 import image from '../assets/img/header-bg.jpg';
 
+//Re useable components
+import Services from '../Common/services';
+
 class Home extends Component {
 
     render(){
@@ -15,6 +18,7 @@ class Home extends Component {
                showButton = {true}
                image={image}           
                 />
+                <Services />
         </div>
         )
     }
