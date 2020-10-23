@@ -1,8 +1,11 @@
 import React from 'react';
 import PageWrapper from './components/PageWrapper';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+//Pages
 import Home from './components/Pages/home';
 import About from './components/Pages/about';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+
+
 function App() {
   return (
     <Router>
@@ -17,10 +20,6 @@ function App() {
         path="/about"
         component={About}
         />
-
-        
-     
-     
     </PageWrapper>
     </Router>
     
