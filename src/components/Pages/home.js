@@ -6,6 +6,7 @@ import image from '../assets/img/header-bg.jpg';
 import Services from '../Common/services';
 import Portfolio from '../Common/portfolio';
 import AboutCommon from '../Common/about';
+import Team from '../Common/team';
 
 class Home extends Component {
 
@@ -23,6 +24,7 @@ class Home extends Component {
                 <Services />
                 <Portfolio />
                 <AboutCommon />
+                <Team />
         </div>
         )
     }
