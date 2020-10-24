@@ -6,6 +6,7 @@ import Home from './components/Pages/home';
 import About from './components/Pages/about';
 import Services from './components/Common/services';
 import Portfolio from './components/Common/portfolio';
+import Contact from './components/Pages/contact';
 
 
 function App() {
@@ -29,6 +30,10 @@ function App() {
         <Route
         path="/portfolio"
         component={Portfolio}
+        />
+        <Route
+        path="/contact"
+        component={Contact}
         />
         
     </PageWrapper>
