@@ -5,6 +5,7 @@ import image from '../assets/img/header-bg.jpg';
 //Re useable components
 import Services from '../Common/services';
 import Portfolio from '../Common/portfolio';
+import About from '../Common/about';
 
 class Home extends Component {
 
@@ -13,7 +14,7 @@ class Home extends Component {
         <div>
              <Header
                title = "Welcome to Our Studio"  
-               subtitle = "IT'S NICE TO MEET YOU"   
+               subtitle = "IT'S NICE TO MEET YOU" 
                buttonText = "Tell me more"
                link = "/services" 
                showButton = {true}
@@ -21,6 +22,7 @@ class Home extends Component {
                 />
                 <Services />
                 <Portfolio />
+                <About />
         </div>
         )
     }
