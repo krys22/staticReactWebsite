@@ -7,6 +7,7 @@ import Services from '../Common/services';
 import Portfolio from '../Common/portfolio';
 import AboutCommon from '../Common/about';
 import Team from '../Common/team';
+import Client from '../Common/client';
 
 class Home extends Component {
 
@@ -25,6 +26,7 @@ class Home extends Component {
                 <Portfolio />
                 <AboutCommon />
                 <Team />
+                <Client />
         </div>
         )
     }

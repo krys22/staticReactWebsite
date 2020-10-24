@@ -19,3 +19,5 @@ class Individual extends Component{
         )
     }
 }
+
+export default Individual;
