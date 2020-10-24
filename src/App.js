@@ -30,10 +30,7 @@ function App() {
         path="/portfolio"
         component={Portfolio}
         />
-        <Route
-        path="/about"
-        component={About}
-        />
+        
     </PageWrapper>
     </Router>
     
