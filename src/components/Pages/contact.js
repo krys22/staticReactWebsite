@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
+import Field from '../Common/field'
 
+const fields = [
+    {name: 'name', elementName: 'input', type: 'text', id: 'name', placeholder: 'Your name'}
+]
 
 class Contact extends Component{
 
