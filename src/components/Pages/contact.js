@@ -28,7 +28,9 @@ class Contact extends Component{
             message: ''
         }
     }
-
+    submitForm = (e) => {
+        alert("Form Submitted. Thank you very much");
+    }
 
     render(){
 
@@ -39,7 +41,7 @@ class Contact extends Component{
                     <h2 className="section-heading text-uppercase">Contact Us</h2>
                     <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
-                <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                <form onSubmit = {e => this.submitForm(e)} name="sentMessage" novalidate="novalidate">
                     <div className="row align-items-stretch mb-5">
                        {fields.sections.map((section, sectionIndex) => {
 
@@ -62,7 +64,9 @@ class Contact extends Component{
                     </div>
                     <div className="text-center">
                         <div id="success"></div>
-                        <button className="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
+                        <button className="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit"
+                        
+                        >Send Message</button>
                     </div>
                 </form>
             </div>
