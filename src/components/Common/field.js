@@ -8,15 +8,14 @@ class Field extends Component{
                 {this.props.elementName === 'input' ? 
                  <input className="form-control" id={this.props.name} type={this.props.type} placeholder={this.props.placeholder}
                                 required="required" data-validation-required-message={`Please enter your ${this.props.name}.`} 
-                                value = {this.props.value}
-                                onChange = {e => this.props.onChange(e)}
+                                name={this.props.name}
                 />
                 :
                 
                 <textarea className="form-control" id={this.props.name} type={this.props.type} placeholder={this.props.placeholder}
                 required="required" data-validation-required-message={`Please enter your ${this.props.name}.`} 
                 value = {this.props.value}
-                onChange = {e => this.props.onChange(e)}
+                onChange = {e => this.props.onChange(e)} name={this.props.name}
                                 
                   ></textarea>
     }
