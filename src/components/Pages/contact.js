@@ -19,11 +19,6 @@ const fields = {
 
 class Contact extends Component{
 
-    
-    submitForm = (e) => {
-        alert("Form Submitted. Thank you very much");
-    }
-
     render(){
 
         return(
@@ -33,7 +28,7 @@ class Contact extends Component{
                     <h2 className="section-heading text-uppercase">Contact Us</h2>
                     <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
-                <form onSubmit = {e => this.submitForm(e)} name="sentMessage" novalidate="novalidate">
+                <form onSubmit = {this.props.handleSubmit} name="sentMessage" novalidate="novalidate">
                     <div className="row align-items-stretch mb-5">
                        {fields.sections.map((section, sectionIndex) => {
 
@@ -41,7 +36,12 @@ class Contact extends Component{
                                <div className = "col-md-6" key = {sectionIndex}>
                                    {section.map((field, i) => {
                                        return <Field {...field} key={i}
-                                       
+                                       value={this.props.values[field.name]}
+                                       name={field.name}
+                                       onChange={this.props.handleChange}
+                                       onBlur={this.props.handleBlur}
+                                       touched = {this.props.touched[field.name]}
+                                       errors = {this.props.errors[field.name]}
                                        />
                                    }
                                    )}
@@ -73,19 +73,20 @@ export default withFormik({
         name: '',
         phone: '',
         email: '',
-        meessage: '',
+        message: '',
     }),
     validate: values => {
-        const errors = {}
-        Object.keys(values).map(v => {
+        const errors = {};
+        Object.keys(values).map( v => {
             if(!values[v]){
-                errors[v] = "Reequired";
+                errors[v] = "Required";
             }
         })
+
         return errors;
     },
 
     handleSubmit: (values, {setSubmitting}) => {
-        alert("You've submitted the form")
+        alert("You've submitted the form", JSON.stringify(values))
     }
 })(Contact);
