@@ -9,14 +9,20 @@
     "name": {
       "type": "string"
     },
-    "last_namee": {
+    "last_name": {
       "type": "string"
     },
     "created_at": {
       "type": "date"
     },
+    "birthday": {
+      "type": "date"
+    },
     "age": {
       "type": "number"
+    },
+    "history":{
+      "type":["object"]
     }
   },
   "validations": [],
