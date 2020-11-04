@@ -23,6 +23,8 @@ app.start = function() {
   });
 };
 
+
+
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
 boot(app, __dirname, function(err) {
@@ -32,3 +34,7 @@ boot(app, __dirname, function(err) {
   if (require.main === module)
     app.start();
 });
+
+app.models.User.afterRemote('create', (ctx, next) => {
+
+})
