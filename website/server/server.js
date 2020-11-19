@@ -35,6 +35,22 @@ boot(app, __dirname, function(err) {
     app.start();
 });
 
+app.models.user.find((err, result) => {
+  if(result.length === 0){
+    const user = {
+
+        email : 'chris@yahoo.com',
+        password: 'test',
+        username: 'chris',
+
+    };
+
+    app.models.user.create(user, (err, result) => {
+
+      console.log("Tried to create user", err, result)
+    })
+  }
+});
 
 //This creates a user profile then creates the profile model after the user is created
 app.models.user.afterRemote('create', (ctx, user, next) => {
