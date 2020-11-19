@@ -37,7 +37,7 @@ boot(app, __dirname, function(err) {
 
 
 //This creates a user profile then creates the profile model after the user is created
-app.models.User.afterRemote('create', (ctx, user, next) => {
+app.models.user.afterRemote('create', (ctx, user, next) => {
     console.log("New User is ", user);
     app.models.Profile.create({
       first_name : user.username,
